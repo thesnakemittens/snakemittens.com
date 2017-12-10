@@ -1,0 +1,40 @@
+<div class="nav pure-g">
+        <div class="pure-u-1-2">
+            <a class="brand-title" href="{{ .Site.BaseURL }}">
+                {{ .Site.Title }}</a></h1>
+            <span class="brand-tagline">{{ with .Site.Params.description }} {{.}} {{end}}</span>
+        </div>
+
+        <nav class="social-icons pure-u-1-2 fa-2x">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="{{ .Site.BaseURL }}pages/about"><i title="About" class="fas fa-user" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i></a>
+                </li>
+        
+                {{ with .Site.Params.twitterName }}
+                <li class="nav-item">
+                        <a href="https://twitter.com/{{ . }}"><i title="Twitter" class="fab fa-twitter" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i></a>
+                    </li>
+                    {{ end }}
+                    {{ with .Site.Params.githubName }}
+                    <li class="nav-item">
+                        <a href="https://github.com/{{ . }} "><i title="GitHub" class="fab fa-github"></i></a>
+                    </li>
+                    {{ end }}
+                    {{ with .Site.Params.stackOverflowId }}
+                    <li class="nav-item">
+                        <a href="https://stackoverflow.com/u/{{ . }} "><i title="Stack Overflow" class="fa fa-stack-overflow"></i></a>
+                    </li>
+                    {{ end }}
+                    {{ with .Site.Params.email }}
+                    <li class="nav-item">
+                        <a href="mailto:{{ . }} "><i title="Email" class="fas fa-envelope" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i></a>
+                    </li>
+                    {{ end }}
+                    <li class="nav-item">
+                        <a href="{{ .Site.BaseURL }}/index.xml"><i class="fa fa-rss" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i></a>
+                    </li>
+                </ul>
+            </nav>
+</div>
+

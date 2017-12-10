@@ -1,3 +1,16 @@
-baseURL = "http://example.org/"
+baseurl = "https://snakemittens.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "snakemittens"
+theme = "infact"
+Paginate = 10
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+[params]
+  twitterName = "thesnakemittens"
+  githubName = "thesnakemittens"
+  description = "...as useless as mittens for snakes"
+  google_analytics = "UA-xxxxxx-xx"
+  hideShareOptions = true

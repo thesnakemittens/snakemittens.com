@@ -1,0 +1,41 @@
+
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
+<div id="layout" class="pure-g index-page">
+    <div class="content pure-u-3-4">
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                {{ range .Paginator.Pages }}
+                {{ if eq .Type "post"}}
+                    {{ partial "postpreview.html" . }}
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+    <div class="sidebar pure-u-1-4">
+        <h3>More Information</h3>
+        {{ range .Data.Pages }}
+        <ul>
+        {{ if eq .Type "page" }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+      {{ end }}
+        <h3>Common Topics</h3>
+        <ul>
+                {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                  <li><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+                {{ end }}
+        </ul>
+    </div>
+
+    <div class="pure-u-1">
+       {{ partial "footer.html" . }}
+    </div>
+</div>
+
+{{ partial "analytics.html" . }}
+</body>
+</html>

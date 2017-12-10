@@ -1,0 +1,22 @@
+<section class="post">
+        <header class="post-header">
+            <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        </header>
+
+        <p class="post-metadata">
+                <b>Posted</b> {{ .Date.Format "January 2, 2006" }}
+                {{ if .Params.tags }}
+                <b>in</b> 
+                {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+                {{ end }} {{ end }}
+        </p>
+
+        <div class="post-description">
+                {{ .Summary }}
+        </div>
+        {{ if .Truncated }}
+        <div>
+          <a href="{{ .RelPermalink }}">Read more…</a>
+        </div>
+        {{ end }}
+    </section>

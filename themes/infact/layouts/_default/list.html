@@ -1,0 +1,23 @@
+
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+
+<div id="layout" class="pure-g index-page">
+    <div class="content pure-u-1">
+            <p class="taxonomy-search">Showing all content for "{{ lower .Title }}"</p>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                {{ range .Paginator.Pages }}
+                {{ partial "postpreview.html" . }}
+                {{ end }}
+            </div>
+        </div>
+
+    <div class="pure-u-1">
+       {{ partial "footer.html" . }}
+    </div>
+</div>
+
+{{ partial "analytics.html" . }}
+</body>
+</html>
