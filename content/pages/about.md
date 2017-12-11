@@ -9,7 +9,7 @@ draft: false
 
 I was once told that I would become a half-decent sysadmin some day.
 
-Has this day come?  Who knows.  It has been a few years since I was told this by a former coworker, and in the intervening time, I'vee figured out:
+Has this day come?  Who knows.  It has been a few years since I was told this by a former coworker, and in the intervening time, I've figured out:
 
 * Linux systems administration (RHEL and CentOS, mostly)
 * Windows systems administration
