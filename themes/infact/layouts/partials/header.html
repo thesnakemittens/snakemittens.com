@@ -18,15 +18,23 @@
     <meta property="og:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
 
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/infact.css">
 
-<!--use just the brands and solid styles-->
+
+<!--FontAwesome-->
 <script src="https://use.fontawesome.com/releases/v5.0.1/js/brands.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.0.1/js/solid.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.0.1/js/regular.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.0.1/js/fontawesome.js"></script>
 
-    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml" />
+<!--Prism.js-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/command-line/prism-command-line.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/command-line/prism-command-line.min.js"></script>
+
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}index.xml" />
 </head>
 <body>
